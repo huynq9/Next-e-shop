@@ -7,7 +7,7 @@ interface ButtonProps {
   disabled?: boolean;
   outline?: boolean;
   small?: boolean;
-  custom: string;
+  custom?: string;
   icon?: IconType;
   onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
@@ -23,6 +23,7 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
   return (
     <button
+      onClick={onClick}
       disabled={disabled}
       className={`
           disabled:opacity-70
